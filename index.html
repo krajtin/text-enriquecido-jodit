@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-controller-spicy-1-production</title>
+
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+
+  
+  <!-- Supernote -->
+	<!-- include libraries(jQuery, bootstrap) -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+<!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
+  <!-- Super note -->
+  
+  <link rel="stylesheet" href="https:////cdnjs.cloudflare.com/ajax/libs/jodit/3.1.39/jodit.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jodit/3.1.39/jodit.min.js"></script>
+
+  <script src="https://code.angularjs.org/1.7.7/angular.min.js"></script>
+  <script src="app.js"></script>
+  
+</head>
+
+<body ng-app="spicyApp1">
+  <div ng-controller="SpicyController">
+    <button ng-click="chiliSpicy()">Chili</button>
+    <button ng-click="jalapenoSpicy()">Jalapeño</button>
+    <p>The food is {{spice}} spicy!</p>
+	
+	
+	<form method="post">
+  <textarea id="summernote" name="editordata"></textarea>
+</form>
+
+
+<div id="editor2" ng-model="qqqqqq"></div>
+  </div>
+  <textarea name="content" id="editor">
+    &lt;p&gt;This is some sample content.&lt;/p&gt;
+  </textarea>
+  <script>
+    var editor = ClassicEditor
+      .create(document.querySelector('#editor'))
+      .then(function (editor) {
+        console.log(Array.from(editor.ui.componentFactory.names()));
+      })
+      .catch(error => {
+        console.log(error);
+      });
+	  
+	  
+
+  
+   
+  </script>
+  
+  
+<script>
+	
+/*var editor2 = new Jodit("#editor2", {
+  "buttons": "bold,strikethrough,underline,italic,|,ul,ol,|,outdent,indent,|,font,fontsize,brush,paragraph,|,image,video,table,link,|,align,undo,redo,|,about"
+});
+*/
+
+
+	</script>
+ 
+</body>
+
+</html>
+
+<!-- 
+Copyright 2019 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
